@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .numberPicker
+        {
+            display:flex;
+            flex-direction:row;
+        }
+        .numarul
+        {
+            padding-left:3px;
+            padding-right:3px;
+
+            width:20px;
+
+            font-size:20px;
+            border:1px solid black;
+        }
+        .butoane
+        {
+            display:flex;
+            flex-direction:column;
+        }
+        .buton
+        {
+            padding-left:3px;
+            padding-right:3px;
+            
+            border:1px solid black;
+        }
+        .buton:hover
+        {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="numberPicker">
+        <div class="numarul" id="numarul">10</div>
+        <div class="butoane">
+            <div class="buton" onclick="change(+1);afisare();">&#708;</div>
+            <div class="buton" onclick="change(-1);afisare();">&#709;</div>
+        </div>
+    </div>
+    <script>
+            var numarulDiv = document.getElementById('numarul');
+
+            var numarul = 10;
+
+            function change(direction)
+            {
+                numarul = numarul + direction;
+            }
+
+            function afisare()
+            {
+                numarulDiv.innerHTML = numarul;
+            }
+    </script>
+
+</body>
+</html>
